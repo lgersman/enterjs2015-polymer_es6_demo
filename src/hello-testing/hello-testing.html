@@ -1,0 +1,13 @@
+<link rel="import" href="/dist/polymer.html">
+      
+<dom-module id="hello-testing">
+  <link rel="import" type="css" href="bundle.css">
+  <template>
+    <input id="valueInput" required pattern="\-?\d+" value="{{value::input}}">
+    <button on-tap="onAdd" disabled$="{{disabled}}">Add</button>
+    <p>
+      result = <span>{{result}}</span>
+    </p>    
+  </template>
+  <script src="bundle.js"></script>
+</dom-module>

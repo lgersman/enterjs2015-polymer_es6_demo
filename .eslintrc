@@ -1,0 +1,47 @@
+    // see http://eslint.org/docs/rules/ for options
+ecmaFeatures:
+    modules: true
+    blockBindings: true
+    forOf: true
+    jsx: true
+    arrowFunctions: true
+    blockBindings: true
+    defaultParams: true
+
+env:
+    node: true
+    es6 : true
+    browser : 1
+
+globals:
+    expect : true
+    describe : true
+    it : true
+    document : true
+    Polymer : true
+
+rules:
+    brace-style: [2, "1tbs"]
+    comma-style: [2, "last"]
+    default-case: 2
+    func-style: [2, "declaration"]
+    guard-for-in: 2
+    no-floating-decimal: 2
+    no-nested-ternary: 2
+    no-undefined: 2
+    radix: 2
+    space-after-keywords: [2, "always"]
+    spaced-line-comment: [2, "always", { exceptions: ["-"]}]
+    valid-jsdoc: [2, { prefer: { "return": "returns"}}]
+    wrap-iife: 2
+    quotes : [1, "single"]
+    no-trailing-spaces : 0
+    no-debugger: 0
+    key-spacing: 0
+        // allow uppercase function call Polymer : https://github.com/eslint/eslint/issues/1424
+    new-cap: [2, { capIsNewExceptions: ["Polymer"] }]
+    no-unused-vars: [2, {"vars": "local", args : "none"}]
+        // enable usage of things like " (event.target.id==='inc') && this.onInc();" 
+    no-unused-expressions: 0
+        // allow functions starting with underscore 
+    no-underscore-dangle: 0

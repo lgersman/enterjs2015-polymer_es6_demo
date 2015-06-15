@@ -1,0 +1,48 @@
+{
+  "name": "enterjs2015-polymer_es6_demo",
+  "version": "0.0.1",
+  "description": "demo for [enterJS 2015 talk Polymer & ES6 in action](http://www.enterjs.de/abstracts#polymer)",
+  "scripts": {
+    "postinstall": "node_modules/.bin/bower install",
+    "tdd": "node_modules/.bin/watchy -w . -i '/dist|dist/.*/' -- node_modules/.bin/gulp serve",
+    "build": "node_modules/.bin/gulp test",
+    "wct": "node_modules/.bin/gulp build && node_modules/.bin/wct test/wct/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lgersman/enterjs2015-polymer_es6_demo.git"
+  },
+  "keywords": [
+    "enterjs",
+    "2015",
+    "gulp",
+    "pragmatic",
+    "es6",
+    "slides"
+  ],
+  "author": "Lars Gersmann <lars.gersmann@cm4all.com> (http://www.cm4all.com/)",
+  "bugs": {
+    "url": "https://github.com/lgersman/enterjs2015-polymer_es6_demo/issues"
+  },
+  "devDependencies": {
+    "gulp": "~3.8.11",
+    "through2": "~0.6.5",
+    "babel": "~5.2.16",
+    "minijasminenode2": "~1.0.0",
+    "watchy": "~0.6.2",
+    "eslint": "~0.19.0",
+    "bower": "~1.4.1",
+    "express": "~4.12.3",
+    "connect-gzip-static": "~1.0.0",
+    "less": "~2.5.0",
+    "ent": "~2.2.0",
+    "serve-index": "~1.6.3",
+    "babelify": "~6.1.2",
+    "uglifyjs": "~2.4.10",
+    "babel-core": "~5.5.6",
+    "globby": "~2.0.0",
+    "browserify": "~10.2.4",
+    "web-component-tester": "~3.1.7"
+  },
+  "dependencies": {}
+}

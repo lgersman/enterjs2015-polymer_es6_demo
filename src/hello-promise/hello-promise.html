@@ -1,0 +1,33 @@
+<link rel="import" href="/dist/polymer.html">
+      
+<dom-module id="hello-promise">
+  <link rel="import" type="css" href="bundle.css">
+  <template>
+    
+     <template is="dom-if" if="{{error}}">
+       <div class="error">{{error}}</div>
+     </template>
+     
+     <template is="dom-if" if="{{promise}}">
+       <div class="loading">
+         Loading data from url <code>{{url}}</code> ...
+       </div>
+     </template>
+     
+     <template is="dom-if" if="{{persons}}">
+       <label>
+         <input type="checkbox" checked="{{ascending::change}}">
+         Order ascending
+       </label>
+       <div class="data"> 
+         <template is="dom-repeat" items="{{persons}}">
+           <div>
+              <a href$="{{_mkHref(item.email)}}">{{item.name}}</a>
+           </div>
+         </template>
+       </div>
+     </template>
+     
+  </template>
+  <script src="bundle.js"></script>
+</dom-module>

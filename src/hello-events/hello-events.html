@@ -1,0 +1,13 @@
+<link rel="import" href="/dist/polymer.html">
+      
+<dom-module id="hello-events">
+  <link rel="import" type="css" href="bundle.css">
+  <template>
+    <content select="button">
+      <button on-tap="onInc">Fallback content button</button> 
+    </content>
+    <pre>{{text}}</pre>
+    <button id="reset">Reset</button>
+  </template>
+  <script src="bundle.js"></script>
+</dom-module>

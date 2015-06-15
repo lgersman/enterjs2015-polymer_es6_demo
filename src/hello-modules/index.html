@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="/dist/browser-polyfill.min.js"></script>
+    <script src="/dist/webcomponents-lite.min.js"></script>
+    <link rel="import" href="hello-modules.html">
+    <style is="custom-style">
+      html /deep/ hello-modules {
+        display   : block;
+      }
+      
+      html /deep/ hello-modules.highlighted {
+        background-color : lightgrey;
+      }
+      
+      /* overwrite custom element css properties */
+      /*
+      :root {
+        --hello-modules-text-color: green;
+      }
+      */
+    </style>
+  </head>
+  <body>
+    <hello-modules _count="20">
+      <div>sdfsdfsdfs</div>
+      <button id="inc">Click me</button>
+        sdfsdfsdf
+    </hello-modules>
+  </body>
+</html>

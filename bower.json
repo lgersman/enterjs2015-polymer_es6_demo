@@ -1,0 +1,30 @@
+{
+  "name": "enterjs2015-polymer_es6_demo",
+  "version": "0.0.1",
+  "authors": [
+    "Lars Gersmann <lars.gersmann@cm4all.com>"
+  ],
+  "description": "demo for [enterJS 2015 talk Polymer & ES6 in action](http://www.enterjs.de/abstracts#polymer)",
+  "main": "dist/index.js",
+  "keywords": [
+    "enterjs",
+    "2015",
+    "webcomponents",
+    "es6",
+    "slides",
+    "polymer"
+  ],
+  "homepage": "https://github.com/lgersman/enterjs2015-polymer_es6_demo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "web-component-tester": "Polymer/web-component-tester#~3.1.7",
+    "test-fixture": "PolymerElements/test-fixture#^1.0.0"
+  }
+}

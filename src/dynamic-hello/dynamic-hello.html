@@ -1,0 +1,20 @@
+<link rel="import" href="/dist/polymer.html">
+      
+<dom-module id="dynamic-hello">
+  <link rel="import" type="css" href="bundle.css">
+  <template>
+    <!--
+      wrong: <pre>dynamic hello {{who}}</pre>
+     
+      wrong: <pre>dynamic hello <span> {{ who }} </span></pre>
+     
+      wrong: <pre>dynamic hello <span> {{who}} </span></pre>
+     
+      correct: <pre>dynamic hello <code>{{who}}</code></pre>
+      
+      better : see below
+    -->
+    <pre>{{text}}</pre>
+  </template>
+  <script src="bundle.js"></script>
+</dom-module>
