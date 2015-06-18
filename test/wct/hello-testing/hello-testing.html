@@ -3,86 +3,86 @@
 	<head>
 	  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 	  <title>hello-testing-basic</title>
-	
+
 	  <script src="../../../bower_components/webcomponentsjs/webcomponents.min.js"></script>
 	  <script src="../../../bower_components/web-component-tester/browser.js"></script>
 	  <script src="../../../bower_components/test-fixture/test-fixture-mocha.js"></script>
 	  <link rel="import" href="../../../bower_components/test-fixture/test-fixture.html">
-	  	
+
 	  <link rel="import" href="../../../dist/hello-testing/hello-testing.html">
 	</head>
 	<body>
-	
+
 	  <test-fixture id="default-value">
 	    <template>
 	      <hello-testing></hello-testing>
 	    </template>
 	  </test-fixture>
-	  
+
 	  <test-fixture id="custom-value">
 	    <template>
 	      <hello-testing value="15"></hello-testing>
 	    </template>
 	  </test-fixture>
-	  
+
 	  <test-fixture id="add">
 	    <template>
 	      <hello-testing value="20"></hello-testing>
 	    </template>
 	  </test-fixture>
-	  
+
 	  <test-fixture id="invalid-input">
 	    <template>
 	      <hello-testing></hello-testing>
 	    </template>
 	  </test-fixture>
-	
+
 	  <script>
-	    suite('hello-testing tests', function() {
-	      
-		  test('default value', function() {
-			instance = fixture('default-value');  
-	        assert.equal(instance.value, 0);
-	      });	
-		  
-		  test('custom value', function() {
-			instance = fixture('custom-value');  
-	        assert.equal(instance.value, 15);
-	      });
-		  
-		  test('add', function() {
-			instance = fixture('add');
-			assert.equal(instance.result, 0);
-			
-			instance.onAdd();
-			assert.equal(instance.result, 20);
-			
-			instance.value = 10
-			instance.onAdd();
-	        assert.equal(instance.result, 30);
-	      });
-		  
-		  test('invalid input', function() {
-			instance = fixture('invalid-input');
-			
-				// test defaults
-			assert.equal(instance.value, 0);
-			assert.equal(instance.$.valueInput.validationMessage, '');
-			assert.equal(instance.disabled, false);
-			assert.equal(instance.querySelector('button').disabled, false);
-				
-				// manipulate input
-			instance.$.valueInput.value = 'whoooops';
-			instance.onInput();
-			
-				// test component changes
-			assert.equal(instance.value, 0);
-			assert.equal(!!instance.$.valueInput.validationMessage, true);
-			assert.equal(instance.disabled, true);
-			assert.equal(instance.querySelector('button').disabled, true);
+			suite('hello-testing tests', function() {
+
+				test('default value', function() {
+					instance = fixture('default-value');
+					assert.equal(instance.value, 0);
+				});
+
+			  test('custom value', function() {
+					instance = fixture('custom-value');
+					assert.equal(instance.value, 15);
+				});
+
+			  test('add', function() {
+					instance = fixture('add');
+					assert.equal(instance.result, 0);
+
+					instance.onAdd();
+					assert.equal(instance.result, 20);
+
+					instance.value = 10
+					instance.onAdd();
+					assert.equal(instance.result, 30);
+				});
+
+		  	test('invalid input', function() {
+					instance = fixture('invalid-input');
+
+						// test defaults
+					assert.equal(instance.value, 0);
+					assert.equal(instance.$.valueInput.validationMessage, '');
+					assert.equal(instance.disabled, false);
+					assert.equal(instance.querySelector('button').disabled, false);
+
+						// manipulate input
+					instance.$.valueInput.value = 'whoooops';
+					instance.onInput();
+
+						// test component changes
+					assert.equal(instance.value, 0);
+					assert.equal(!!instance.$.valueInput.validationMessage, true);
+					assert.equal(instance.disabled, true);
+					assert.equal(instance.querySelector('button').disabled, true);
 	      });
 	    });
 	  </script>
-	
+
 	</body>
 </html>
