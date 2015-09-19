@@ -4,8 +4,9 @@
   "description": "demo for [enterJS 2015 talk Polymer & ES6 in action](http://www.enterjs.de/abstracts#polymer)",
   "scripts": {
     "postinstall": "node_modules/.bin/bower install",
-    "tdd": "node_modules/.bin/watchy -w . -i '/dist|dist/.*/' -- node_modules/.bin/gulp serve",
+    "tdd": "node_modules/.bin/watchy -w . -i '/dist|(.*/dist(/.*)?)/' -- node_modules/.bin/gulp serve",
     "build": "node_modules/.bin/gulp test",
+    "serve": "node_modules/.bin/gulp serve",
     "wct": "node_modules/.bin/gulp build && node_modules/.bin/wct test/wct/"
   },
   "repository": {
