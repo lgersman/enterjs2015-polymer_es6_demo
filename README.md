@@ -6,7 +6,7 @@ Slides project can be found at https://github.com/lgersman/enterjs2015-polymer_e
 
 0. clone this repository to your local machine
 
-0. go tino cloned project and execute ``npm install``
+0. go into cloned project and execute ``npm install``
 
 0. execute ``npm run serve`` and open ``http://localhost:4000`` in your browser.
 
