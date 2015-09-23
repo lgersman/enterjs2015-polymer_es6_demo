@@ -8,7 +8,7 @@ Slides project can be found at https://github.com/lgersman/enterjs2015-polymer_e
 
 0. go tino cloned project and execute ``npm install``
 
-0. execute ``npm serve`` and open ``http://localhost:4000`` in your browser.
+0. execute ``npm run serve`` and open ``http://localhost:4000`` in your browser.
 
 0. in your browser you will see the whole projectory listed. navigate to folder ``dist``.
 
